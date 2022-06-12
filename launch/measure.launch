@@ -1,0 +1,17 @@
+<launch>
+
+    <param name="/measure/gazebo_robot_id" value="turtlebot3"/>
+    <!--turtlebot3 or turtlebot3_burger depending on the simulation-->
+
+    <param name="/measure/gazebo_topic" value="/gazebo/model_states"/>
+    <param name="/measure/target_frame" value="odom"/>
+    <param name="/measure/source_frame" value="base_footprint"/>
+    <param name="/measure/frequency" value="10"/>
+
+    <node 
+        pkg="r1_measure" 
+        name="measure"
+        type="measure.py">
+    </node>
+  
+</launch>
